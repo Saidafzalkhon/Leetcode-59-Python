@@ -1,19 +1,19 @@
 n = int(input())
-nums = [[0]*n for i in range(n)]
-if n != 1:
-    a=b=c=d,k = 0,1
-    for i in range(n):
+matrix = [[0]*n for i in range(n)]
+a=b=c=d = 0
+k = 1
+for i in range(n):
         for a in range(i,n-i):
-            nums[i][a] = k
+            matrix[i][a] = k
             k+=1
         for b in range(i+1,n-i):
-            nums[b][a] = k
+            matrix[b][a] = k
             k+=1
         for c in range(b-1,i,-1):
-            nums[b][c] = k
+            matrix[b][c] = k
             k+=1
         for d in range(a,i,-1):
-            nums[d][i] = k
+            matrix[d][i] = k
             k+=1
-    print(nums)
-else: print([[1]])
+print(matrix)
+
